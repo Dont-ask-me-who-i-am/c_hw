@@ -1,0 +1,93 @@
+//write a program do the addition of two no's using scanf statement
+#include<stdio.h>
+int main()
+{
+    int a, b, c;
+    printf("Enter 2 numbers :");
+    scanf("%d %d",&a,&b);
+    c= a+b;
+    printf("Sum of a and b : %d",c);
+    return 0;
+}
+
+
+//write a program to find the area of the circle
+#include<stdio.h>
+#define pi 3.14
+int main()
+{
+    float r, area;
+    printf("Enter radius :");
+    scanf("%f",&r);
+    area = pi*r*r;
+    printf("Area of circle : %0.3f",area);
+    return 0;
+}
+
+
+//write a program to print the emplayee_id,salary,grade
+#include<stdio.h>
+int main()
+{
+
+    int employee_usn;
+    float salary;
+    char grade;
+    printf("Enter usn :");
+    scanf("%d",&employee_usn);
+    printf("Enter the salary :");
+    scanf("%f",&salary);
+
+    printf("\nEntered detail is:");
+    printf("employee_usn: %d",employee_usn);
+    printf("Salary: %f\n",salary);
+    return 0;
+}
+
+
+//write a program to find area of the square
+#include<stdio.h>
+int main()
+{
+    float area, s;
+    printf("Enter the length of the side of the square :");
+    scanf("%f", &s);
+    area = s*s;
+    printf("Area of the square = %0.3f",area);
+    return 0;
+}
+
+
+//write a program to find the area of the triangle
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    double area, a, b, c, s, height, base;
+    int k;
+    s= (a+b+c)/2;
+    printf("Enter which method\n Select 1) for sides\n Select 2) for height\n");
+    scanf("%d", &k);
+
+    switch(k)
+    {
+        case 1:
+            printf("Enter the sides :");
+            scanf("%lf %lf %lf",&a ,&b,&c);
+            s= (a+b+c)/2;
+            area = sqrt(s*(s-a)*(s-b)*(s-c));
+            printf("Area = %0.3lf",area);
+            break;
+        
+        case 2:
+            printf("Enter the base and perpendicluar height of triangle :");
+            scanf("%lf %lf", &base, &height);
+            area = 0.5*base*height;
+            printf("Area = %0.3lf",area);
+            break;
+
+        default:
+            printf("Invalid entry :");
+            break;    
+    }
+}
