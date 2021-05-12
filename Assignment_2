@@ -1,0 +1,60 @@
+//Program to determine if a number is odd or even
+
+#include<stdio.h>
+
+int main()
+{
+    int x;
+    char r='Y';
+    while(r=='Y')
+    { 
+        printf("\nEnter a number: ");
+        scanf("%d", &x);
+        //Normal
+        if(x%2==0)
+            printf("%d is even\n", x);
+        else
+            printf("%d is odd\n", x);
+        //Using conditional operands
+        //(x%2==0)?(printf("%d is even\n", x)):(printf("%d is odd\n", x));
+        printf("Run again? (Y/N): ");
+        scanf("%s", &r);
+    }
+    return 0;
+}
+
+
+//Program to calculate the distance between 2 points
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    float x1,x2,y1,y2,d;
+    printf("\nEnter co-ordinates of first point: ");
+    scanf("%f%f", &x1, &y1);
+    printf("Co-ordinates of point 1: (%0.2f,%0.2f)\n\n", x1, y1);
+    printf("Enter co-ordinates of second point: ");
+    scanf("%f%f", &x2, &y2);
+    printf("Co-ordinates of point 2: (%0.2f,%0.2f)\n\n", x2, y2);
+    d=sqrt(pow((x2-x1), 2) + pow((y2-y1), 2));
+    printf("Distance between the 2 points is: %0.2f unit(s)\n", d);
+    return 0;
+}
+
+
+//Program to calculate quotient and remainder
+
+#include<stdio.h>
+
+int main()
+{
+    int dd,dr,q,r;
+    printf("\nEnter value of dividend and divisor: ");
+    scanf("%d%d", &dd, &dr);
+    r=dd%dr;
+    q=(dd-r)/dr;
+    printf("Quotient and remainder are: %d and %d\n", q, r);
+    return 0;
+}
